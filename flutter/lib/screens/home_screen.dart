@@ -1,3 +1,4 @@
+import 'entrada_texto_screen.dart';
 import 'package:flutter/material.dart';
 import '../models/seccion.dart';
 import 'placeholder_screen.dart';
@@ -19,6 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   Widget get _contenidoActual {
     if (_indiceActual == 0) return _buildInicio();
+    if (_indiceActual == 1) return const EntradaTextoScreen();
     return SeccionPlaceholderScreen(titulo: secciones[_indiceActual - 1].titulo);
   }
 
