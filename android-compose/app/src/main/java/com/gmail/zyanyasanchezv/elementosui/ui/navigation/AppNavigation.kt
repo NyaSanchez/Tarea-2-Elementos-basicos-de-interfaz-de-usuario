@@ -1,5 +1,6 @@
 package com.gmail.zyanyasanchezv.elementosui.ui.navigation
 
+import com.gmail.zyanyasanchezv.elementosui.ui.screens.EntradaTextoScreen
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -98,7 +99,8 @@ fun AppNavigation() {
                 modifier = Modifier.padding(padding)
             ) {
                 composable("inicio") { HomeScreen(navController) }
-                secciones.forEach { seccion ->
+                composable("entrada_texto") { EntradaTextoScreen() }
+                secciones.filter { it.ruta != "entrada_texto" }.forEach { seccion ->
                     composable(seccion.ruta) { SeccionPlaceholderScreen(seccion.titulo) }
                 }
             }
