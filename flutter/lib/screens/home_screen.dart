@@ -1,3 +1,4 @@
+import 'botones_acciones_screen.dart';
 import 'entrada_texto_screen.dart';
 import 'package:flutter/material.dart';
 import '../models/seccion.dart';
@@ -19,9 +20,21 @@ class _HomeScreenState extends State<HomeScreen> {
   }
 
   Widget get _contenidoActual {
-    if (_indiceActual == 0) return _buildInicio();
-    if (_indiceActual == 1) return const EntradaTextoScreen();
-    return SeccionPlaceholderScreen(titulo: secciones[_indiceActual - 1].titulo);
+    if (_indiceActual == 0) {
+      return _buildInicio();
+    }
+
+    if (_indiceActual == 1) {
+      return const EntradaTextoScreen();
+    }
+
+    if (_indiceActual == 2) {
+      return const BotonesAccionesScreen();
+    }
+
+    return SeccionPlaceholderScreen(
+      titulo: secciones[_indiceActual - 1].titulo,
+    );
   }
 
   void _seleccionar(int indice) {
