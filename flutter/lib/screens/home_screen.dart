@@ -1,3 +1,4 @@
+import 'seleccion_screen.dart';
 import 'botones_acciones_screen.dart';
 import 'entrada_texto_screen.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,10 @@ class _HomeScreenState extends State<HomeScreen> {
 
     if (_indiceActual == 2) {
       return const BotonesAccionesScreen();
+    }
+
+    if (_indiceActual == 3) {
+      return const SeleccionScreen();
     }
 
     return SeccionPlaceholderScreen(
