@@ -1,4 +1,4 @@
-package com.gmail.zyanyasanchezv.panaldeabejas
+package com.gmail.zyanyasanchezv.elementosui
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

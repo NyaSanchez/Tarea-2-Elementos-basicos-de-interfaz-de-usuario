@@ -1,4 +1,4 @@
-package com.gmail.zyanyasanchezv.panaldeabejas
+package com.gmail.zyanyasanchezv.elementosui
 
 import org.junit.Test
 

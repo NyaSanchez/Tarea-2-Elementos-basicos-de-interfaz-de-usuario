@@ -1,4 +1,4 @@
-package com.gmail.zyanyasanchezv.panaldeabejas.ui.model
+package com.gmail.zyanyasanchezv.elementosui.ui.model
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add

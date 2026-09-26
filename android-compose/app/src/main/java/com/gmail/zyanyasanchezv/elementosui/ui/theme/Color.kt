@@ -1,4 +1,4 @@
-package com.gmail.zyanyasanchezv.panaldeabejas.ui.theme
+package com.gmail.zyanyasanchezv.elementosui.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

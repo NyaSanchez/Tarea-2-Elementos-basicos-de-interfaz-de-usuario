@@ -1,6 +1,5 @@
-package com.gmail.zyanyasanchezv.panaldeabejas.ui.theme
+package com.gmail.zyanyasanchezv.elementosui.ui.theme
 
-import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme

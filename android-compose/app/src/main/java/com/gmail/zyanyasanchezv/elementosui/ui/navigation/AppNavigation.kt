@@ -1,4 +1,4 @@
-package com.gmail.zyanyasanchezv.panaldeabejas.ui.navigation
+package com.gmail.zyanyasanchezv.elementosui.ui.navigation
 
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -23,14 +23,13 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.currentBackStackEntryAsState
 import androidx.navigation.compose.rememberNavController
-import com.gmail.zyanyasanchezv.panaldeabejas.ui.model.secciones
-import com.gmail.zyanyasanchezv.panaldeabejas.ui.screens.HomeScreen
-import com.gmail.zyanyasanchezv.panaldeabejas.ui.screens.SeccionPlaceholderScreen
+import com.gmail.zyanyasanchezv.elementosui.ui.model.secciones
+import com.gmail.zyanyasanchezv.elementosui.ui.screens.HomeScreen
+import com.gmail.zyanyasanchezv.elementosui.ui.screens.SeccionPlaceholderScreen
 import kotlinx.coroutines.launch
 import androidx.compose.material3.ExperimentalMaterial3Api
 
@@ -49,7 +48,7 @@ fun AppNavigation() {
             ModalDrawerSheet {
                 Spacer(Modifier.height(12.dp))
                 Text(
-                    text = "Panal de Abejas",
+                    text = "Elementos de la Interfaz",
                     style = MaterialTheme.typography.titleLarge,
                     modifier = Modifier.padding(16.dp)
                 )
@@ -84,7 +83,7 @@ fun AppNavigation() {
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("Panal de Abejas") },
+                    title = { Text("Elementos de la Interfaz") },
                     navigationIcon = {
                         IconButton(onClick = { scope.launch { drawerState.open() } }) {
                             Icon(Icons.Filled.Menu, contentDescription = "Abrir menú")

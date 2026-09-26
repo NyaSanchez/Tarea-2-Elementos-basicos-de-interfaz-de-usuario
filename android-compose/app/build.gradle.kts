@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    namespace = "com.gmail.zyanyasanchezv.panaldeabejas"
+    namespace = "com.gmail.zyanyasanchezv.elementosui"
     compileSdk {
         version = release(37)
     }
 
     defaultConfig {
-        applicationId = "com.gmail.zyanyasanchezv.panaldeabejas"
+        applicationId = "com.gmail.zyanyasanchezv.elementosui"
         minSdk = 24
         targetSdk = 37
         versionCode = 1
