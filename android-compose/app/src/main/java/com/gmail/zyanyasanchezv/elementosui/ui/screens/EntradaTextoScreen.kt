@@ -1,5 +1,7 @@
 package com.gmail.zyanyasanchezv.elementosui.ui.screens
 
+import androidx.compose.material3.Button
+import com.gmail.zyanyasanchezv.elementosui.ui.model.DatosCompartidos
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -42,11 +44,12 @@ fun EntradaTextoScreen() {
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        // 1. Campo simple
+
+        // 1. Campo simple (conectado con la Sección 4)
         var nombre by remember { mutableStateOf("") }
         ElementoDemo(
             titulo = "Campo de texto simple",
-            descripcion = "Captura texto libre. La etiqueta indica qué se espera y se mueve arriba del campo al escribir."
+            descripcion = "Captura texto libre. Este campo está conectado con la Sección 4: lo que agregues aquí aparece en su lista de nombres capturados."
         ) {
             OutlinedTextField(
                 value = nombre,
@@ -54,6 +57,17 @@ fun EntradaTextoScreen() {
                 label = { Text("Nombre") },
                 modifier = Modifier.fillMaxWidth()
             )
+            Button(
+                onClick = {
+                    if (nombre.isNotBlank()) {
+                        DatosCompartidos.nombresCapturados.add(nombre)
+                        nombre = ""
+                    }
+                },
+                modifier = Modifier.padding(top = 8.dp)
+            ) {
+                Text("Agregar a la lista de la Sección 4")
+            }
         }
 
         // 2. Validación

@@ -1,5 +1,6 @@
 package com.gmail.zyanyasanchezv.elementosui.ui.screens
 
+import com.gmail.zyanyasanchezv.elementosui.ui.model.DatosCompartidos
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -288,6 +289,24 @@ fun ListasColeccionesScreen() {
                 ) { pagina ->
                     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
                         Text("Contenido de ${titulosTabs[pagina]}")
+                    }
+                }
+            }
+        }
+        // 8. Conexión entre secciones
+        ElementoDemo(
+            titulo = "Conexión entre secciones",
+            descripcion = "Los nombres que agregas en el campo de texto simple de la Sección 1 aparecen aquí automáticamente."
+        ) {
+            if (DatosCompartidos.nombresCapturados.isEmpty()) {
+                Text(
+                    "Aún no has agregado ningún nombre desde la Sección 1.",
+                    style = MaterialTheme.typography.bodySmall
+                )
+            } else {
+                Column {
+                    DatosCompartidos.nombresCapturados.forEach { nombreGuardado ->
+                        Text("• $nombreGuardado", modifier = Modifier.padding(vertical = 4.dp))
                     }
                 }
             }
