@@ -1,5 +1,6 @@
 package com.gmail.zyanyasanchezv.elementosui.ui.navigation
 
+import com.gmail.zyanyasanchezv.elementosui.ui.screens.ContenedoresScreen
 import com.gmail.zyanyasanchezv.elementosui.ui.screens.InformacionScreen
 import com.gmail.zyanyasanchezv.elementosui.ui.screens.ListasColeccionesScreen
 import com.gmail.zyanyasanchezv.elementosui.ui.screens.SeleccionScreen
@@ -108,11 +109,7 @@ fun AppNavigation() {
                 composable("botones") { BotonesAccionesScreen() }
                 composable("seleccion") { SeleccionScreen() }
                 composable("listas") { ListasColeccionesScreen() }
-                secciones.filter {
-                    it.ruta !in listOf("entrada_texto", "botones", "seleccion", "listas", "informacion")
-                }.forEach { seccion ->
-                    composable(seccion.ruta) { SeccionPlaceholderScreen(seccion.titulo) }
-                }
+                composable("contenedores") { ContenedoresScreen() }
             }
         }
     }
