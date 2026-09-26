@@ -1,3 +1,4 @@
+import 'listas_colecciones_screen.dart';
 import 'seleccion_screen.dart';
 import 'botones_acciones_screen.dart';
 import 'entrada_texto_screen.dart';
@@ -35,6 +36,9 @@ class _HomeScreenState extends State<HomeScreen> {
 
     if (_indiceActual == 3) {
       return const SeleccionScreen();
+    }
+    if (_indiceActual == 4) {
+      return const ListasColeccionesScreen();
     }
 
     return SeccionPlaceholderScreen(
