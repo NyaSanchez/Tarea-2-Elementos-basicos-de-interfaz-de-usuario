@@ -3,26 +3,48 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/HomeFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.gmail.zyanyasanchezv.elementosuiviews.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/HomeFragment"
+        android:name="com.gmail.zyanyasanchezv.elementosuiviews.HomeFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_home" />
 
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.gmail.zyanyasanchezv.elementosuiviews.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/EntradaTextoFragment"
+        android:name="com.gmail.zyanyasanchezv.elementosuiviews.EntradaTextoFragment"
+        android:label="Entrada de texto"
+        tools:layout="@layout/fragment_entrada_texto" />
 
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+    <fragment
+        android:id="@+id/BotonesAccionesFragment"
+        android:name="com.gmail.zyanyasanchezv.elementosuiviews.BotonesAccionesFragment"
+        android:label="Botones y acciones"
+        tools:layout="@layout/fragment_botones_acciones" />
+
+    <fragment
+        android:id="@+id/SeleccionFragment"
+        android:name="com.gmail.zyanyasanchezv.elementosuiviews.SeleccionFragment"
+        android:label="Elementos de selección"
+        tools:layout="@layout/fragment_seleccion" />
+
+    <fragment
+        android:id="@+id/ListasColeccionesFragment"
+        android:name="com.gmail.zyanyasanchezv.elementosuiviews.ListasColeccionesFragment"
+        android:label="Listas y colecciones"
+        tools:layout="@layout/fragment_listas_colecciones" />
+
+    <fragment
+        android:id="@+id/InformacionFragment"
+        android:name="com.gmail.zyanyasanchezv.elementosuiviews.InformacionFragment"
+        android:label="Información y retroalimentación"
+        tools:layout="@layout/fragment_informacion" />
+
+    <fragment
+        android:id="@+id/ContenedoresFragment"
+        android:name="com.gmail.zyanyasanchezv.elementosuiviews.ContenedoresFragment"
+        android:label="Contenedores y estructura"
+        tools:layout="@layout/fragment_contenedores" />
+
 </navigation>
