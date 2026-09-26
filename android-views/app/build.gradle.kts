@@ -35,6 +35,7 @@ android {
 }
 
 dependencies {
+    implementation("io.coil-kt:coil:2.7.0")
     implementation("androidx.recyclerview:recyclerview:1.4.0")
     implementation("androidx.swiperefreshlayout:swiperefreshlayout:1.2.0")
     implementation("androidx.viewpager2:viewpager2:1.1.0")
