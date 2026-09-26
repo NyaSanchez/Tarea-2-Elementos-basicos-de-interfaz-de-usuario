@@ -1,5 +1,6 @@
 package com.gmail.zyanyasanchezv.elementosui.ui.navigation
 
+import com.gmail.zyanyasanchezv.elementosui.ui.screens.BotonesAccionesScreen
 import com.gmail.zyanyasanchezv.elementosui.ui.screens.EntradaTextoScreen
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
@@ -100,7 +101,8 @@ fun AppNavigation() {
             ) {
                 composable("inicio") { HomeScreen(navController) }
                 composable("entrada_texto") { EntradaTextoScreen() }
-                secciones.filter { it.ruta != "entrada_texto" }.forEach { seccion ->
+                composable("botones") { BotonesAccionesScreen() }
+                secciones.filter { it.ruta != "entrada_texto" && it.ruta != "botones" }.forEach { seccion ->
                     composable(seccion.ruta) { SeccionPlaceholderScreen(seccion.titulo) }
                 }
             }
