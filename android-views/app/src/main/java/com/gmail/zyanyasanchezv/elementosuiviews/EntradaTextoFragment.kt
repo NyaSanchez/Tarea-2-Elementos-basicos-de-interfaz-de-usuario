@@ -15,6 +15,35 @@ class EntradaTextoFragment : Fragment() {
     private var _binding: FragmentEntradaTextoBinding? = null
     private val binding get() = _binding!!
 
+    private fun configurarConexionSecciones() {
+
+        binding.btnAgregarALista.setOnClickListener {
+
+            val nombre =
+                binding.etNombre.text
+                    ?.toString()
+                    ?.trim()
+                    .orEmpty()
+
+            if (nombre.isBlank()) {
+
+                binding.tvConexion.text =
+                    "Primero escribe un nombre."
+
+                return@setOnClickListener
+            }
+
+            DatosCompartidos.elementosLista.add(
+                nombre
+            )
+
+            binding.tvConexion.text =
+                "\"$nombre\" se agregó a la lista de la Sección 4."
+
+            binding.etNombre.text?.clear()
+        }
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,6 +69,7 @@ class EntradaTextoFragment : Fragment() {
         configurarValidacion()
         configurarDesplegable()
         configurarBusqueda()
+        configurarConexionSecciones()
     }
 
     private fun configurarValidacion() {

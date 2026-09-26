@@ -60,7 +60,7 @@ class ListasColeccionesFragment : Fragment() {
         val elementos =
             (1..20).map {
                 "Elemento $it"
-            }
+            } + DatosCompartidos.elementosLista
 
         binding.rvListaVertical.layoutManager =
             LinearLayoutManager(requireContext())

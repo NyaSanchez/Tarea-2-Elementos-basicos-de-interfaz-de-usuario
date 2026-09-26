@@ -68,6 +68,21 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnAgregarALista"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Agregar a Listas y colecciones" />
+
+                <TextView
+                    android:id="@+id/tvConexion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Escribe un nombre para enviarlo a la Sección 4."
+                    android:textSize="14sp" />
+
             </LinearLayout>
 
         </com.google.android.material.card.MaterialCardView>
