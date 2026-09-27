@@ -1,3 +1,5 @@
+import 'contenedores_screen.dart';
+import 'informacion_screen.dart';
 import 'listas_colecciones_screen.dart';
 import 'seleccion_screen.dart';
 import 'botones_acciones_screen.dart';
@@ -39,6 +41,14 @@ class _HomeScreenState extends State<HomeScreen> {
     }
     if (_indiceActual == 4) {
       return const ListasColeccionesScreen();
+    }
+
+    if (_indiceActual == 5) {
+      return const InformacionScreen();
+    }
+
+    if (_indiceActual == 6) {
+      return const ContenedoresScreen();
     }
 
     return SeccionPlaceholderScreen(

@@ -1,3 +1,4 @@
+import '../models/datos_compartidos.dart';
 import 'package:flutter/material.dart';
 
 import '../widgets/elemento_demo.dart';
@@ -176,30 +177,59 @@ class _ListasColeccionesScreenState
             descripcion:
             'ListView.builder permite mostrar grandes colecciones de forma eficiente. '
                 'En esta demostración se presentan veinte elementos desplazables.',
-            contenido: SizedBox(
-              height:
-              240,
-              child: ListView.builder(
-                itemCount:
-                20,
-                itemBuilder:
-                    (context, index) {
+            contenido: ValueListenableBuilder<List<String>>(
+              valueListenable:
+              DatosCompartidos.elementos,
+              builder: (
+                  context,
+                  elementosCompartidos,
+                  child,
+                  ) {
 
-                  return ListTile(
-                    leading:
-                    CircleAvatar(
-                      child:
-                      Text(
-                        '${index + 1}',
-                      ),
-                    ),
-                    title:
-                    Text(
-                      'Elemento ${index + 1}',
-                    ),
-                  );
-                },
-              ),
+                return SizedBox(
+                  height: 240,
+                  child: ListView.builder(
+                    itemCount:
+                    20 + elementosCompartidos.length,
+                    itemBuilder:
+                        (context, index) {
+
+                      if (index < 20) {
+
+                        return ListTile(
+                          leading: CircleAvatar(
+                            child: Text(
+                              '${index + 1}',
+                            ),
+                          ),
+                          title: Text(
+                            'Elemento ${index + 1}',
+                          ),
+                        );
+                      }
+
+                      final indiceCompartido =
+                          index - 20;
+
+                      final elemento =
+                      elementosCompartidos[
+                      indiceCompartido];
+
+                      return ListTile(
+                        leading: const CircleAvatar(
+                          child: Icon(
+                            Icons.person_add_alt_1,
+                          ),
+                        ),
+                        title: Text(elemento),
+                        subtitle: const Text(
+                          'Agregado desde Entrada de texto',
+                        ),
+                      );
+                    },
+                  ),
+                );
+              },
             ),
           ),
 
